@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-09-07T02:09:42+01:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Belfast Elixir - Today I learned</title><subtitle>We want to share some of the things we know or find out during our working day about Application Development, Integrationa and Digital Transformation.</subtitle><author><name>http://www.linkedin.com/in/alainpham</name></author><entry><title type="html">The First Post</title><link href="http://0.0.0.0:4000/posts/first-post/" rel="alternate" type="text/html" title="The First Post" /><published>2019-07-04T02:03:00+01:00</published><updated>2019-07-04T02:03:00+01:00</updated><id>http://0.0.0.0:4000/posts/first-post</id><content type="html" xml:base="http://0.0.0.0:4000/posts/first-post/">&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Elementum facilisis leo vel fringilla. Diam in arcu cursus euismod quis. Quis ipsum suspendisse ultrices gravida dictum fusce. Velit ut tortor pretium viverra suspendisse potenti nullam. Dictum non consectetur a erat nam at lectus urna duis. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus in. Ut porttitor leo a diam sollicitudin tempor id. Malesuada fames ac turpis egestas maecenas pharetra. Ultrices eros in cursus turpis. Cras fermentum odio eu feugiat. Condimentum lacinia quis vel eros donec. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Scelerisque varius morbi enim nunc faucibus.
+&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h2&gt;Setup a project&lt;/h2&gt;
+
+Pharetra magna ac placerat vestibulum lectus. In egestas erat imperdiet sed euismod nisi porta. Sed arcu non odio euismod lacinia at quis. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Felis bibendum ut tristique et egestas quis. Metus dictum at tempor commodo. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Semper quis lectus nulla at volutpat. Pellentesque habitant morbi tristique senectus et netus et. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Ante metus dictum at tempor commodo ullamcorper a. Arcu non sodales neque sodales ut etiam sit. Est placerat in egestas erat imperdiet sed euismod nisi. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Orci dapibus ultrices in iaculis nunc sed. Eleifend mi in nulla posuere. Tincidunt dui ut ornare lectus sit. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Pharetra sit amet aliquam id diam.
+
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;quarkus-kafka-camel-servlet
+
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;quarkus-kafka-camel-servlet
+
+mvn io.quarkus:quarkus-maven-plugin:0.18.0:create &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-DprojectGroupId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;agilabs &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-DprojectArtifactId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;quarkus-kafka-camel-servlet &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-DclassName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;agilabs.GreetingResource&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-Dpath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/hello&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;
+    Add the following dependencies to the pom.xml file.
+&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.quarkus&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;quarkus-smallrye-reactive-messaging-kafka&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.quarkus&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;quarkus-camel-core&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.quarkus&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;quarkus-camel-servlet&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2&gt;Configure Camel&lt;/h2&gt;
+
+&lt;h3&gt;Application properties&lt;/h3&gt;
+
+&lt;p&gt;Configure application properties in src/main/resources/application.properties&lt;/p&gt;
+
+&lt;pre&gt;
+quarkus.camel.servlet.url-patterns = /camel/*
+%dev.quarkus.camel.routes-uris = camel/routes.xml
+quarkus.camel.routes-uris=file:/camel/routes.xml
+quarkus.camel.defer-init-phase = true
+&lt;/pre&gt;
+
+&lt;p&gt;
+    We will match all calls that go to /camel/* to the camel servlet component. In dev mode we will scan the file
+    routes.xml for camel routes located in the classpath, in the resource folder camel.
+&lt;/p&gt;
+&lt;p&gt;
+    When launched in &quot;production mode&quot; with the native executable the resources are not included by default in the
+    binary. I'm externalizing the routes.xml file to the folder /camel so that it can be set
+    and changed dynamically. This is actually quite interesting because we get to have a configurable native executable
+    that we can fine tune by switching the routes during run time.
+    For some when I tried to change the property quarkus.camel.routes-uris during native run time, it's new value doesn't
+    seem to be taken into account. So this file path is kind of like being hard coded right now.. 
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit July 6,2019 : I discovered that there are different &lt;a
+            href=&quot;https://quarkus.io/guides/extension-authors-guide&quot; target=&quot;_blank&quot;&gt;Configuration Phases&lt;/a&gt; 
+            : BUILD_TIME, BUILD_AND_RUN_TIME_FIXED &amp; RUN_TIME. 
+        It turns out this property is set to BUILD_AND_RUN_TIME_FIXED, so it is not dynamically read during native run time for the moment.
+        More details &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/quarkusio/quarkus/issues/3116&quot;&gt;here&lt;/a&gt;.
+        &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+    Quarkus.camel.defer-init-phase property is set to true because it seems that the camel context is created before all
+    the CDI bean wiring and dependency injection happens.
+    I need to do further digging to understand entirely how this works.
+&lt;/p&gt;
+
+&lt;h3&gt;
+    Camel Routes XML Files
+&lt;/h3&gt;
+
+&lt;p&gt;
+    Lets set up the routes in the src/main/resources/camel/routes.xml file.
+&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;routes&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://camel.apache.org/schema/spring&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;route&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;receive-kafka-events&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;from&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uri=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;direct:receive-events&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/from&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;log&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;message=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Received from kafka broker : ${body}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/log&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/route&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;route&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;send-kafka-events&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;from&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uri=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;servlet:send&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/from&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;log&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;message=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sending&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/log&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;convertBodyTo&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;java.lang.String&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/convertBodyTo&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ref=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smallrye-producer&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;produce(${body})&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setBody&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;constant&amp;gt;&lt;/span&gt;Message sent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/constant&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/setBody&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/route&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/routes&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The first route is to consume messages coming from Kafka. We will wire later on a camel producer template to send
+    messages to this route from any other class in application&lt;/p&gt;
+&lt;p&gt;The second route listens to http requests coming on the path &lt;strong&gt;http://0.0.0.0:8080/camel/send&lt;/strong&gt;.
+    It will use a bean that incorporates an emitter to send messages.
+&lt;/p&gt;
+
+&lt;h2&gt;Configure sinks for Kafka topics&lt;/h2&gt;
+
+&lt;h3&gt;Application properties&lt;/h3&gt;
+
+&lt;pre&gt;
+mp.messaging.incoming.in-events.connector=smallrye-kafka
+mp.messaging.incoming.in-events.topic=events
+mp.messaging.incoming.in-events.value.deserializer=org.apache.kafka.common.serialization.StringDeserializer
+
+mp.messaging.outgoing.out-events.connector=smallrye-kafka
+mp.messaging.outgoing.out-events.topic=events
+mp.messaging.outgoing.out-events.value.serializer=org.apache.kafka.common.serialization.StringSerializer
+&lt;/pre&gt;
+
+&lt;p&gt;We will configure a smallrye-kafka connector for incoming messages and outgoing messages&lt;/p&gt;
+
+&lt;h3&gt;Create a consumer&lt;/h3&gt;
+
+&lt;p&gt;Now lets go ahead and create a consumer with the @Incoming annotation. We will need to inject a Camel
+    ProducerTemplate instance into the consumer so that the message can be forwarded to our Camel direct endpoint&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;agilabs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.enterprise.context.ApplicationScoped&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.inject.Inject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.camel.ProducerTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.eclipse.microprofile.reactive.messaging.Incoming&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@ApplicationScoped&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;nd&quot;&gt;@Inject&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;ProducerTemplate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;camelProducer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Incoming&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;in-events&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;consume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;              
+        &lt;span class=&quot;n&quot;&gt;camelProducer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;direct:receive-events&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3&gt;Create a producer&lt;/h3&gt;
+
+&lt;p&gt;
+    Now lets create a producer. Note that this producer will be used by the camel xml context. So it needs to support reflection to find the different methods dynamically.
+    We need to register this class for reflection so that it can work once compiled to native code.
+&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;agilabs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.enterprise.context.ApplicationScoped&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.inject.Inject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.camel.ProducerTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.eclipse.microprofile.reactive.messaging.Incoming&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.quarkus.runtime.annotations.RegisterForReflection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.smallrye.reactive.messaging.annotations.Emitter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.smallrye.reactive.messaging.annotations.Stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@ApplicationScoped&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@RegisterForReflection&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Producer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;nd&quot;&gt;@Inject&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;out-events&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Emitter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emitter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;produce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;emitter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;       
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2&gt;Wiring it all together&lt;/h2&gt;
+
+&lt;p&gt;Now that we have everything configured. We need to wire everything together. Register the SmallRye producer into the
+    camel context and inject a camel producer template in the Quarkus CDI context.&lt;/p&gt;
+&lt;p&gt;As mentioned earlier, it seems that the Camel context is started earlier than the CDI context, so when Camel
+    tries to look for a bean called smallrye-producer it will fail to start because it can't find it.
+    This also comes from the fact that ApplicationScoped beans are instantiated in a lazy fashion. 
+    Since the smallrye-producer is never called in the CDI context, it will never be initialized.
+    For these reasons we need to observe the Camel InitializedEvent and register the SmallRye producer at that specific time.
+&lt;/p&gt;
+&lt;p&gt;
+    The @Produces annotation provides the Camel producer template to the CDI context.
+&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;agilabs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.enterprise.event.Observes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.enterprise.inject.Produces&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.inject.Inject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.camel.CamelContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.camel.ProducerTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.slf4j.Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.slf4j.LoggerFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.quarkus.camel.core.runtime.InitializedEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.smallrye.reactive.messaging.annotations.Emitter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io.smallrye.reactive.messaging.annotations.Stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CamelWiring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Inject&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Producer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smallRyeProducer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Inject&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;CamelContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;camelContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;registerSmallryeEmitter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Observes&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InitializedEvent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;camelContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRegistry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smallrye-producer&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smallRyeProducer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Produces&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ProducerTemplate&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildCamelProducerTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;camelContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createProducerTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2&gt;Compiling and testing the project&lt;/h2&gt;
+
+&lt;p&gt;Now lets compile it to native code. The compilation is quite memory &amp; CPU intensive. I guess this is due to the costly compilation of XML support libraries. 
+    At peak I observed 9.8 GB of memory consumption. The whole compilation process took about 7 to 8 minutes&lt;/p&gt;
+
+&lt;pre&gt;
+git clone https://github.com/alainpham/quarkus-kafka-camel-servlet.git
+cd quarkus-kafka-camel-servlet
+mvn package -Pnative
+&lt;/pre&gt;
+
+&lt;p&gt;
+    If you are in a rush. I have already built a container image for you. You can run everything wih only one command
+    using the docker-compose.yml file. It will boot a zookeeper and a kafka broker using images provided by the Strimzi project and 
+    also a container with the current project.
+&lt;/p&gt;
+
+&lt;pre&gt;
+docker-compose up
+&lt;/pre&gt;
+
+&lt;p&gt;You can also get the container image directly here :
+&lt;br&gt;
+        &lt;a href=&quot;https://hub.docker.com/r/alainpham/quarkus-kafka-camel-servlet&quot;&gt;https://hub.docker.com/r/alainpham/quarkus-kafka-camel-servlet&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Test it!&lt;/p&gt;
+&lt;pre&gt;
+curl http://localhost:8080/camel/send  -X POST -H &quot;Content-Type: text/plain&quot;  -d 'Hello there!!'
+&lt;/pre&gt;
+
+&lt;p&gt;The output should be&lt;/p&gt;
+
+&lt;pre&gt;
+quarkus-kafka-camel-servlet_1  | 2019-07-05 13:12:58,025 INFO  [send-kafka-events] (executor-thread-1) Sending
+quarkus-kafka-camel-servlet_1  | 2019-07-05 13:12:58,027 INFO  [io.sma.rea.mes.kaf.KafkaSink] (vert.x-eventloop-thread-1) Message org.eclipse.microprofile.reactive.messaging.Message$$Lambda$5e1799c60041209b57937765b33186671a72f6f8@7f35f7425e98 sent successfully to Kafka topic 'events'
+quarkus-kafka-camel-servlet_1  | 2019-07-05 13:12:58,027 INFO  [receive-kafka-events] (vert.x-eventloop-thread-0) Received from kafka broker : Hello there!
+&lt;/pre&gt;
+
+&lt;p&gt;Thanks for reading !&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Resources I used for inspiration&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://quarkus.io/guides/kafka-guide&quot;&gt;Quarkus Kafka Guide&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://quarkus.io/guides/cdi-reference&quot;&gt;Quarkus - Contexts and Dependency Injection&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://github.com/gnodet/quarkus-camel&quot;&gt;Quarkus - Camel example by Guillaume Nodet&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a
+            href=&quot;https://github.com/quarkusio/quarkus/blob/master/extensions/smallrye-reactive-messaging/deployment/src/test/java/io/quarkus/smallrye/reactivemessaging/StreamEmitter.java&quot;&gt;Smallrye
+            Reactive Messaging Unit Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>http://www.linkedin.com/in/alainpham</name></author><category term="something" /><category term="something2" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Elementum facilisis leo vel fringilla. Diam in arcu cursus euismod quis. Quis ipsum suspendisse ultrices gravida dictum fusce. Velit ut tortor pretium viverra suspendisse potenti nullam. Dictum non consectetur a erat nam at lectus urna duis. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus in. Ut porttitor leo a diam sollicitudin tempor id. Malesuada fames ac turpis egestas maecenas pharetra. Ultrices eros in cursus turpis. Cras fermentum odio eu feugiat. Condimentum lacinia quis vel eros donec. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Scelerisque varius morbi enim nunc faucibus.</summary></entry></feed>
