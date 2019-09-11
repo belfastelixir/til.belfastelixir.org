@@ -77,6 +77,8 @@ Please use the information below to start an instance of the site and check that
 
 ## Development Info
 
+This repo uses [rvm](https://rvm.io/). Please ensure you have it installed before proceeding.
+
 ```
 git clone git@github.com:belfastelixir/til.belfastelixir.org.git
 cd til.belfastelixir.org
